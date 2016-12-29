@@ -1,0 +1,17 @@
+version: '2'
+services:
+  web:
+    build: .
+    ports:
+    - "4000:4000"
+    command: mix phoenix.server
+    volumes:
+    - ./app:/app
+    links:
+      - postgres:db 
+    environment:
+      - APP_NAME=my_app
+  postgres:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD='mysecretpassword'
