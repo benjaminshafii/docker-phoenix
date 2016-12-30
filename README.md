@@ -1,4 +1,4 @@
-# Django Development With Docker Compose
+# Phoenix Development With Docker Compose
 
 Featuring:
 
