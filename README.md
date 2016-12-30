@@ -1,4 +1,10 @@
-# How to launch
+# Django Development With Docker Compose
+
+Featuring:
+
+Docker
+Docker Compose
+Elixir 1.3.4
 
 ## First Time
 Create a new app
