@@ -8,10 +8,10 @@ services:
     volumes:
     - ./app:/app
     links:
-      - postgres:db
+      - postgres
     environment:
       - APP_NAME=my_app
   postgres:
     image: postgres
     environment:
-      - POSTGRES_PASSWORD='mysecretpassword'
+      - POSTGRES_PASSWORD="mysecretpassword"

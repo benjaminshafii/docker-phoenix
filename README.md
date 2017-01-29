@@ -18,7 +18,7 @@ Change
   username: "postgres",
   password: "mysecretpassword",
   database: "postgres",
-  hostname: "db",
+  hostname: "postgres",
   pool_size: 10
 ```
 
