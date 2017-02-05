@@ -14,4 +14,7 @@ services:
   postgres:
     image: postgres
     environment:
-      - POSTGRES_PASSWORD="mysecretpassword"
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - "5432"
