@@ -9,8 +9,6 @@ services:
     - ./app:/app
     links:
       - postgres
-    environment:
-      - APP_NAME=my_app
   postgres:
     image: postgres
     environment:

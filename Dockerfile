@@ -1,4 +1,5 @@
 FROM elixir:1.3.4
+
 RUN apt-get update
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
 RUN apt-get -y install nodejs inotify-tools
