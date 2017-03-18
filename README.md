@@ -8,14 +8,14 @@ Featuring:
 * Phoenix 1.3
 
 ## First Time
-Create a new app
-Build the Dockerfile
+### Build the Dockerfile
 `cd docker-phoenix`
 `docker-compose build`
 
-Create an empty app
+### Create an Empty App
 `docker-compose run web bash /initiate.sh`
 
+### Configure DB
 Change
 `./app/config/dev.exs`
 ```
@@ -43,3 +43,9 @@ git init
 
 ## Running an Existing App
 `docker-compose up`
+
+## Running mix commands
+Any command can be run using `run` syntax
+
+e.g.
+`docker-compose run web iex -S mix`
