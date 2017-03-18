@@ -1,4 +1,4 @@
-mix phoenix.new .
+mix phx.new .
 mix deps.get --force gettext \
   phoenix_live_reload \
   cowboy \
