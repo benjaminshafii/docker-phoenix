@@ -1,9 +1,10 @@
 # Phoenix Development With Docker Compose
 
-Featuring:
-
+Requirements:
 * Docker
 * Docker Compose
+
+Featuring:
 * Elixir 1.4
 * Phoenix 1.3
 
