@@ -10,6 +10,7 @@ Featuring:
 ## First Time
 ### Build the Dockerfile
 `cd docker-phoenix`
+
 `docker-compose build`
 
 ### Create an Empty App
@@ -34,13 +35,6 @@ if you want to be able to run tests
 Run
 `docker-compose run web mix ecto.create`
 
-### Reinitializing Git
-If you want to start your project with a clean git history
-```
-rm -rf ./git
-git init
-```
-
 ## Running an Existing App
 `docker-compose up`
 
@@ -49,3 +43,11 @@ Any command can be run using `run` syntax
 
 e.g.
 `docker-compose run web iex -S mix`
+
+## Reinitializing Git
+If you want to start your project with a clean git history
+```
+rm -rf ./git
+git init
+```
+
