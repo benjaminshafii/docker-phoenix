@@ -17,6 +17,10 @@ Featuring:
 ### Create an Empty App
 `docker-compose run web bash /initiate.sh`
 
+### Change the Phoenix App permissions
+This will probably change in the future but for now
+`sudo chown -R $USER ./app`
+
 ### Configure DB
 Change
 `./app/config/dev.exs`
