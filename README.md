@@ -1,5 +1,7 @@
 # Phoenix Development With Docker Compose
 
+This project aims at jumpstarting phoenix development
+
 Requirements:
 * Docker
 * Docker Compose
@@ -15,7 +17,7 @@ Featuring:
 `docker-compose build`
 
 ### Create an Empty App
-`docker-compose run web bash /initiate.sh`
+`docker-compose run initiate`
 
 ### Change the Phoenix App permissions
 This will probably change in the future but for now
@@ -39,8 +41,12 @@ if you want to be able to run tests
 
 
 Run
-`docker-compose up -d postgres`
-`docker-compose run web mix ecto.create`
+
+```
+docker-compose up -d postgres
+docker-compose run web mix ecto.create
+
+```
 
 ## Running an Existing App
 `docker-compose up`
