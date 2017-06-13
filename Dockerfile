@@ -13,6 +13,5 @@ RUN mix local.rebar --force
 RUN mix archive.install --force  \ 
     https://github.com/phoenixframework/archives/raw/master/phx_new.ez
 
-ADD ./initiate.sh /initiate.sh
 
 EXPOSE 4000

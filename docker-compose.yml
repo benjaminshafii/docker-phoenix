@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   web:
     build: .
@@ -16,3 +16,11 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432"
+  initiate:
+    build: .
+    working_dir: /
+    tty: true
+    volumes:
+      - ./initiate.sh:/initiate.sh
+      - ./app:/app
+    command: sh ./initiate.sh

@@ -37,7 +37,9 @@ Change
 `./app/config/test.exs`
 if you want to be able to run tests
 
+
 Run
+`docker-compose up -d postgres`
 `docker-compose run web mix ecto.create`
 
 ## Running an Existing App

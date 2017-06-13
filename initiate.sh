@@ -1,4 +1,4 @@
-mix phx.new .
+mix phx.new app && cd app 
 mix deps.get --force gettext \
   phoenix_live_reload \
   cowboy \
@@ -7,5 +7,3 @@ mix deps.get --force gettext \
   phoenix \
   postgrex \
   phoenix_ecto \
-mix ecto.create
-npm install
