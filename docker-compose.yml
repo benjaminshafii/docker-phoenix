@@ -1,10 +1,10 @@
-version: '2'
+version: '3'
 services:
   web:
     build: .
     ports:
     - "4000:4000"
-    command: mix phoenix.server
+    command: mix phx.server
     volumes:
     - ./app:/app
     links:
@@ -16,3 +16,11 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - "5432"
+  initiate:
+    build: .
+    working_dir: /
+    tty: true
+    volumes:
+      - ./initiate.sh:/initiate.sh
+      - ./app:/app
+    command: sh ./initiate.sh

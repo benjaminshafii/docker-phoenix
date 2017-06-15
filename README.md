@@ -1,16 +1,29 @@
 # Phoenix Development With Docker Compose
 
-Featuring:
+This project aims at jumpstarting phoenix development
 
-Docker
-Docker Compose
-Elixir 1.3.4
+Requirements:
+* Docker
+* Docker Compose
+
+Featuring:
+* Elixir 1.3.4
+* Phoenix 1.2
 
 ## First Time
-Create a new app
+### Build the Dockerfile
+`cd docker-phoenix`
 
-`docker-compose run web bash /initiate.sh`
+`docker-compose build`
 
+### Create an Empty App
+`docker-compose run initiate`
+
+### Change the Phoenix App permissions
+This will probably change in the future but for now
+`sudo chown -R $USER ./app`
+
+### Configure DB
 Change
 `./app/config/dev.exs`
 ```
@@ -21,12 +34,32 @@ Change
   hostname: "postgres",
   pool_size: 10
 ```
+
 **Note: You'll also need to modify
 `./app/config/test.exs`
 if you want to be able to run tests
 
-Run
-`docker-compose run web mix ecto.create`
 
-## To Launch the containers
+Run
+
+```
+docker-compose up -d postgres
+docker-compose run web mix ecto.create
+
+```
+
+## Running an Existing App
 `docker-compose up`
+
+## Running mix commands
+Any command can be run using `run` syntax
+
+e.g.
+`docker-compose run web iex -S mix`
+
+## Reinitializing Git
+If you want to start your project with a clean git history
+```
+rm -rf ./git
+git init
+```

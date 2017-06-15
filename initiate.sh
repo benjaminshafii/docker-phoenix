@@ -7,5 +7,3 @@ mix deps.get --force gettext \
   phoenix \
   postgrex \
   phoenix_ecto \
-mix ecto.create
-npm install
